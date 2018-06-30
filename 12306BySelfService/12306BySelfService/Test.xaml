@@ -1,0 +1,30 @@
+﻿<Window x:Class="_12306BySelfService.Test"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12306BySelfService"
+        mc:Ignorable="d"
+        Title="Test" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="65" Margin="28,19,0,0" VerticalAlignment="Top" SelectionUnit="Cell"  Width="238" CanUserAddRows="True"  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding dateTime}"></DataGridTextColumn>
+
+                <DataGridTemplateColumn>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label Foreground="Red" Content="删除" Tag="" Uid=""></Label>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,168,0,10">
+            <TextBlock x:Name="tkStationText" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" Text="TextBlock" VerticalAlignment="Top"/>
+        </ScrollViewer>
+        
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="28,89,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Page x:Class="_12306BySelfService.SubPages.AboutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_12306BySelfService.SubPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="关于系统" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Width="1224.178" Height="706.584" VerticalAlignment="Top">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="647" Margin="150,50,0,0" VerticalAlignment="Top" Orientation="Vertical" Width="943">
+            <TextBlock TextWrapping="Wrap" Text="关于" Height="66" HorizontalAlignment="Center" Margin="463,0,378,0" FontWeight="Bold" FontSize="24" Width="101" FontFamily="{DynamicResource {x:Static SystemFonts.IconFontFamilyKey}}"/>
+            <StackPanel Height="576" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+                <StackPanel Height="566" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Width="135">
+                    <TextBlock Text="作者" Height="40" FontSize="18" />
+                    <TextBlock Text="创建时间" Height="40" FontSize="18" />
+                    <TextBlock Text="微信" Height="40" FontSize="18" />
+                    <TextBlock Text="QQ" Height="40" FontSize="18" />
+                    <TextBlock Text="E-Mail" Height="40" FontSize="18" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Width="783" Height="566">
+                    <TextBlock Text="徐坤" Height="40" FontSize="20" Foreground="Red" FontWeight="Bold" TextDecorations="Underline"  Cursor="Hand" MouseDown="RightAllReserve_MouseDown" />
+                    <TextBlock Text="2018-01-01" Height="40" FontSize="16" />
+                    <TextBlock Text="xk871007570" Height="40" FontSize="16" />
+                    <TextBlock Text="1252297247" Height="40" FontSize="16" />
+                    <TextBlock Text="henu_xk@126.com" Height="40" FontSize="16" />
+                    <TextBlock Text="" Height="40" FontSize="16" />
+                    <TextBlock Text="" Height="40" FontSize="16" />
+                    <TextBlock Name="RightAllReserve" Text="版权所有，翻版必究！" Height="40" FontSize="20" FontWeight="Bold" TextDecorations="Underline" HorizontalAlignment="Center" VerticalAlignment="Bottom" MouseDown="RightAllReserve_MouseDown" Cursor="Hand"  />
+                </StackPanel>
+            </StackPanel>
+
+
+        </StackPanel>
+
+    </Grid>
+</Page>

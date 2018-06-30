@@ -1,0 +1,13 @@
+﻿[ERROR] 2018-06-27 22:20:59 System.Exception: 操作超时
+   在 TrainCommon.HttpRequest.HttpPost(HttpItem item) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\HttpRequest.cs:行号 109
+   在 _12306BySelfService.Login.<>c__DisplayClass26_0.<Process>b__0() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 160
+   在 System.Threading.Tasks.Task.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 _12306BySelfService.Login.<Process>d__26.MoveNext() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 152 
+[ERROR] 2018-06-27 22:37:09 System.Runtime.InteropServices.COMException (0x80020101): 异常来自 HRESULT:0x80020101
+   在 mshtml.HTMLWindow2Class.IHTMLWindow2_execScript(String code, String language)
+   在 _12306BySelfService.SubPages.QuerySubway.BrowserSubway_LoadCompleted(Object sender, NavigationEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\QuerySubway.xaml.cs:行号 74 

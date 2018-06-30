@@ -1,0 +1,10 @@
+﻿[ERROR] 2018-06-25 21:30:07 System.Exception: 操作超时
+   在 TrainCommon.HttpRequest.HttpPost(HttpItem item) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\HttpRequest.cs:行号 109
+   在 _12306BySelfService.Login.<>c__DisplayClass26_0.<Process>b__0() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 160
+   在 System.Threading.Tasks.Task.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 _12306BySelfService.Login.<Process>d__26.MoveNext() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 152 

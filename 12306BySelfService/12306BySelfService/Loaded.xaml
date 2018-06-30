@@ -1,0 +1,18 @@
+﻿<Window x:Class="_12306BySelfService.Loaded"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_12306BySelfService"
+        mc:Ignorable="d"
+        Icon="Resources\App.ico"
+        Title="Loaded" Height="302.813" Width="411.742"
+        Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="24" Margin="0,245,0,0" VerticalAlignment="Top" Width="406"/>
+        <Label x:Name="lblInfo" Content="正在初始化资源，请稍等......." HorizontalAlignment="Left" Margin="9,272,0,0" VerticalAlignment="Top" Height="18" Width="392"  Foreground="Blue" />
+        <Image Height="251" VerticalAlignment="Top" Source="Resources/Images/logo04.png" Stretch="Fill" Margin="0,-13,0,0" HorizontalAlignment="Left" Width="406"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\bin\TrainService.dll.config
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\bin\TrainService.dll
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\bin\TrainService.pdb
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\obj\Debug\TrainService.csprojResolveAssemblyReference.cache
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\obj\Debug\TrainService.csproj.CoreCompileInputs.cache
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\obj\Debug\TrainService.dll
+C:\Users\xunkun\Desktop\12306BySelfService\TrainService\obj\Debug\TrainService.pdb

@@ -1,0 +1,63 @@
+﻿<Page xmlns:UserControls="clr-namespace:_12306BySelfService.UserControls" x:Class="_12306BySelfService.SubPages.QuerySaleTime"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:_12306BySelfService.SubPages"
+      mc:Ignorable="d"
+      Title="起售查询" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Width="1224.178" Height="698" VerticalAlignment="Top">
+    <Grid>
+        <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="688" Margin="50,0,0,0" Width="1120">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Margin="30" Height="550" Width="1062">
+                <WrapPanel HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Bottom">
+                    <Label Content="查询选项"></Label>
+                    <ComboBox x:Name="cbQueryItem" Width="130" Margin="20,0,0,0" Height="25">
+                        <ComboBoxItem Uid="0" IsSelected="True" Content="按车站查询"></ComboBoxItem>
+                        <ComboBoxItem Uid="1" Content="按起售时间段查询"></ComboBoxItem>
+                        <ComboBoxItem Uid="2" Content="车次查询"></ComboBoxItem>
+                    </ComboBox>
+                    <StackPanel x:Name="stackStation" Visibility="Visible" Margin="20,0">
+                        <UserControls:AutoCompleteTextBox Uid="1" Height="23" Width="130" x:Name="tb_SaleStation" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <Popup Name="popStartStation" AllowsTransparency="True" StaysOpen="False" PopupAnimation="Fade" IsOpen="False" PlacementTarget="{Binding ElementName=tb_startStation}" Placement="Right" >
+                            <Label Style="{StaticResource tipLable}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="支持拼音或首字母输入"/>
+                                </StackPanel>
+                            </Label>
+                        </Popup>
+                    </StackPanel>
+                    <StackPanel x:Name="stackSaleTime" Visibility="Collapsed" Margin="20,0">
+                        <ComboBox x:Name="cbxSaleTime" Width="130" HorizontalAlignment="Left" VerticalAlignment="Top"></ComboBox>
+                    </StackPanel>
+                    <StackPanel x:Name="StackTrainNo" Visibility="Collapsed" Margin="20,0">
+                        <TextBox Uid="1" Height="26" Width="120" x:Name="tb_TrainNo" HorizontalAlignment="Left" Text="" VerticalAlignment="Top"></TextBox>
+                    </StackPanel>
+                    <StackPanel x:Name="stackQuery">
+                        <Button Content="查询" Width="70" Height="26" Click="Button_Click" Margin="20,0"></Button>
+                    </StackPanel>
+                </WrapPanel>
+                <WrapPanel Margin="0,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Width="1040" Height="495">
+                    <StackPanel x:Name="stackStationText" Orientation="Horizontal" Width="1030">
+                        <Label Content="起售时间："></Label>
+                        <TextBlock x:Name="tkStationText" TextWrapping="WrapWithOverflow" MaxWidth="500">北京: 10:00  上海: 14:30  广州: 11:00</TextBlock>
+                    </StackPanel>
+                    <StackPanel x:Name="stackSaleTimeText" Visibility="Visible">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="490">
+                            <TextBlock x:Name="stackSaleTimeTextCont" FontSize="16" Foreground="Tomato" TextWrapping="WrapWithOverflow"></TextBlock>
+                        </ScrollViewer>
+                    </StackPanel>
+                    <StackPanel x:Name="stackTrainNumberInfo" Visibility="Collapsed" MaxHeight="490">
+                        <WebBrowser x:Name="webBrowser"></WebBrowser>
+                    </StackPanel>
+                </WrapPanel>
+            </StackPanel>
+            <StackPanel x:Name="WrapPanelNote" VerticalAlignment="Top" Width="1045">
+                <StackPanel>
+                    <Label Content="温馨提示："></Label>
+                    <TextBlock x:Name="tkCurDate" Foreground="Green" FontSize="15" Margin="50,0,0,0"></TextBlock>
+                    <TextBlock x:Name="tkDeadDate" Foreground="IndianRed" FontSize="15" Margin="50,0,0,0"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </WrapPanel>
+    </Grid>
+</Page>

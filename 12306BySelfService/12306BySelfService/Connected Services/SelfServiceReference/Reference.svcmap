@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9c6752b8-de3d-4fe4-b50e-bec83691a829" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58189/TrainService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TrainService.xsd" MetadataType="Schema" ID="c71a1fcd-9712-4952-939e-9113073e00b3" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TrainService1.xsd" MetadataType="Schema" ID="5fb7bdc7-50c1-4347-a08a-6966ec2f22c8" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TrainService.disco" MetadataType="Disco" ID="efeeede8-4789-47a4-82f1-d6edfe339a92" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?disco" />
+    <MetadataFile FileName="TrainService2.xsd" MetadataType="Schema" ID="52ea94b4-3742-4b3a-abdb-bf84f567eefb" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TrainService.wsdl" MetadataType="Wsdl" ID="75abd51a-604c-4b22-9ed7-7ffdb72a3439" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?wsdl" />
+    <MetadataFile FileName="TrainService3.xsd" MetadataType="Schema" ID="089e5c8e-1509-454e-b104-460b8febc269" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TrainService4.xsd" MetadataType="Schema" ID="1ee22d81-7c77-4748-8571-f1c454e1b2ee" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd6" />
+    <MetadataFile FileName="TrainService5.xsd" MetadataType="Schema" ID="0d991f5a-d4bc-4a8f-9829-563e321ae5dd" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TrainService6.xsd" MetadataType="Schema" ID="207b1fe5-5c44-4e67-bccf-ec0646eccbe0" SourceId="1" SourceUrl="http://localhost:58189/TrainService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,70 @@
+﻿[ERROR] 2018-06-24 20:35:34 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 20:50:12 验证失败验证码校验失败 
+[ERROR] 2018-06-24 20:52:03 System.Exception: 操作超时
+   在 TrainCommon.HttpRequest.HttpPost(HttpItem item) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\HttpRequest.cs:行号 109
+   在 _12306BySelfService.Login.<>c__DisplayClass26_0.<Process>b__0() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 160
+   在 System.Threading.Tasks.Task.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 _12306BySelfService.Login.<Process>d__26.MoveNext() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 152 
+[ERROR] 2018-06-24 20:54:54 验证失败验证码校验失败 
+[ERROR] 2018-06-24 21:06:09 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 21:06:30 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 21:23:28 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 21:28:38 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 21:33:28 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 23:09:31 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 43 
+[ERROR] 2018-06-24 23:18:00 验证失败验证码校验失败 
+[ERROR] 2018-06-24 23:19:52 验证失败验证码校验失败 
+[ERROR] 2018-06-24 23:30:16 验证失败验证码校验失败 
+[ERROR] 2018-06-24 23:31:32 System.Exception: 操作超时
+   在 TrainCommon.HttpRequest.HttpPost(HttpItem item) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\HttpRequest.cs:行号 109
+   在 _12306BySelfService.Login.<>c__DisplayClass26_0.<Process>b__0() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 160
+   在 System.Threading.Tasks.Task.InnerInvoke()
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 _12306BySelfService.Login.<Process>d__26.MoveNext() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\Login.xaml.cs:行号 152 
+[ERROR] 2018-06-24 23:50:26 验证失败验证码校验失败 
+[ERROR] 2018-06-24 23:51:15 System.ComponentModel.Win32Exception (0x80004005): 组或资源的状态不是执行请求操作的正确状态。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient.WlanInterface.get_CurrentConnection() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 226
+   在 _12306BySelfService.SubPages.MySettingPage.MySettingPage_Loaded(Object sender, RoutedEventArgs e) 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 45 
+[ERROR] 2018-06-24 23:51:42 System.ComponentModel.Win32Exception (0x80004005): 试图与网络服务器建立会话，但目前与该服务器建立的会话太多。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient..ctor() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 632
+   在 _12306BySelfService.SubPages.MySettingPage.GetAvailableNetworkList1() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 67 
+[ERROR] 2018-06-24 23:51:49 System.ComponentModel.Win32Exception (0x80004005): 试图与网络服务器建立会话，但目前与该服务器建立的会话太多。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient..ctor() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 632
+   在 _12306BySelfService.SubPages.MySettingPage.GetAvailableNetworkList1() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 67 
+[ERROR] 2018-06-24 23:52:35 System.ComponentModel.Win32Exception (0x80004005): 试图与网络服务器建立会话，但目前与该服务器建立的会话太多。
+   在 NativeWifi.Wlan.ThrowIfError(Int32 win32ErrorCode) 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\Interop.cs:行号 1603
+   在 NativeWifi.WlanClient..ctor() 位置 C:\Users\xunkun\Desktop\12306BySelfService\TrainCommon\Wlan\WlanApi.cs:行号 632
+   在 _12306BySelfService.SubPages.MySettingPage.GetAvailableNetworkList1() 位置 C:\Users\xunkun\Desktop\12306BySelfService\12306BySelfService\SubPages\MySettingPage.xaml.cs:行号 67 

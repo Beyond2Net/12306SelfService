@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TrainService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_ITrainService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex" />
+        <ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:58189/TrainService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/TrainSelfService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITrainService_SendInkStrokes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendInkStrokes" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_Talk_InputMessage">
+    <wsdl:part name="parameters" element="tns:Talk" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessage" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccount" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetLogName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogName" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetLogName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_IsLoginSuccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoginSuccess" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_IsLoginSuccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoginSuccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_QueryTrain_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTrain" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_QueryTrain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryTrainResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_QueryAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAll" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_QueryAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_TrainReserve_InputMessage">
+    <wsdl:part name="parameters" element="tns:TrainReserve" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_TrainReserve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TrainReserveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_SaveTicket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTicket" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_SaveTicket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_TicketInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:TicketInfo" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_TicketInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TicketInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_ReturnTickets_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnTickets" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_ReturnTickets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReturnTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_HttpGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HttpGet" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_HttpGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HttpGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_HttpPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:HttpPost" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_HttpPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HttpPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_OnInkStrokesUpdate_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:OnInkStrokesUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_ShowLogin_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowLogin" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_ShowLogout_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowLogout" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_ShowTalk_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowTalk" />
+  </wsdl:message>
+  <wsdl:message name="ITrainService_ShowOnLineNum_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ShowOnLineNum" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="ITrainService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SendInkStrokes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/SendInkStrokes" message="tns:ITrainService_SendInkStrokes_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/Login" message="tns:ITrainService_Login_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/Logout" message="tns:ITrainService_Logout_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Talk">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/Talk" message="tns:ITrainService_Talk_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/GetMessage" message="tns:ITrainService_GetMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/GetMessageResponse" message="tns:ITrainService_GetMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/GetAccount" message="tns:ITrainService_GetAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/GetAccountResponse" message="tns:ITrainService_GetAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetLogName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/GetLogName" message="tns:ITrainService_GetLogName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/GetLogNameResponse" message="tns:ITrainService_GetLogName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/GetImage" message="tns:ITrainService_GetImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/GetImageResponse" message="tns:ITrainService_GetImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="IsLoginSuccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/IsLoginSuccess" message="tns:ITrainService_IsLoginSuccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/IsLoginSuccessResponse" message="tns:ITrainService_IsLoginSuccess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="QueryTrain">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/QueryTrain" message="tns:ITrainService_QueryTrain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/QueryTrainResponse" message="tns:ITrainService_QueryTrain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="QueryAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/QueryAll" message="tns:ITrainService_QueryAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/QueryAllResponse" message="tns:ITrainService_QueryAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="TrainReserve">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/TrainReserve" message="tns:ITrainService_TrainReserve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/TrainReserveResponse" message="tns:ITrainService_TrainReserve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SaveTicket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/SaveTicket" message="tns:ITrainService_SaveTicket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/SaveTicketResponse" message="tns:ITrainService_SaveTicket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="TicketInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/TicketInfo" message="tns:ITrainService_TicketInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/TicketInfoResponse" message="tns:ITrainService_TicketInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ReturnTickets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/ReturnTickets" message="tns:ITrainService_ReturnTickets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/ReturnTicketsResponse" message="tns:ITrainService_ReturnTickets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/Delete" message="tns:ITrainService_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/DeleteResponse" message="tns:ITrainService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="HttpGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/HttpGet" message="tns:ITrainService_HttpGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/HttpGetResponse" message="tns:ITrainService_HttpGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="HttpPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/HttpPost" message="tns:ITrainService_HttpPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/HttpPostResponse" message="tns:ITrainService_HttpPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/GetData" message="tns:ITrainService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/GetDataResponse" message="tns:ITrainService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITrainService/GetDataUsingDataContract" message="tns:ITrainService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/GetDataUsingDataContractResponse" message="tns:ITrainService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="OnInkStrokesUpdate">
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/OnInkStrokesUpdate" message="tns:ITrainService_OnInkStrokesUpdate_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowLogin">
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/ShowLogin" message="tns:ITrainService_ShowLogin_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowLogout">
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/ShowLogout" message="tns:ITrainService_ShowLogout_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowTalk">
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/ShowTalk" message="tns:ITrainService_ShowTalk_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ShowOnLineNum">
+      <wsdl:output wsaw:Action="http://tempuri.org/ITrainService/ShowOnLineNum" message="tns:ITrainService_ShowOnLineNum_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDualHttpBinding_ITrainService" type="tns:ITrainService">
+    <wsp:PolicyReference URI="#WSDualHttpBinding_ITrainService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendInkStrokes">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/SendInkStrokes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Talk">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/Talk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessage">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/GetMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/GetAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogName">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/GetLogName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/GetImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLoginSuccess">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/IsLoginSuccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTrain">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/QueryTrain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAll">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/QueryAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrainReserve">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/TrainReserve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTicket">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/SaveTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketInfo">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/TicketInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReturnTickets">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/ReturnTickets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HttpGet">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/HttpGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HttpPost">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/HttpPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OnInkStrokesUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/OnInkStrokesUpdate" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowLogin">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/ShowLogin" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowLogout">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/ShowLogout" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowTalk">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/ShowTalk" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowOnLineNum">
+      <soap12:operation soapAction="http://tempuri.org/ITrainService/ShowOnLineNum" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TrainService">
+    <wsdl:port name="WSDualHttpBinding_ITrainService" binding="tns:WSDualHttpBinding_ITrainService">
+      <soap12:address location="http://localhost:58189/TrainService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:58189/TrainService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
